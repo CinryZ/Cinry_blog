@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 视口 -->
+	<meta name="viewport"   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title></title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/tech.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="zxr">
+		<div class="header">
+			<div class="others"></div>
+			<!-- 此处用bootstrap插件做一个导航栏 -->
+			<nav class="navbar navbar-default navbar-fixed-top">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        </button>
+			      <a class="navbar-brand" href="#">CinryのBlog</a>
+			    </div>
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      	<ul class="nav navbar-nav navbar-right">
+				        <li><a href="/">网站首页</a></li>
+				        <li class="dropdown active">
+					         <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我的博客 <span class="caret"></span>
+					         </a>
+					         <ul class="dropdown-menu">
+					            <li><a href="/tech">专业技术</a></li>
+					            <li><a href="#">随思随想</a></li>
+					         </ul>
+				        </li>
+				        <li><a href="/personal">关于我</a></li>
+				        <li><a href="/editArt">发表文章</a></li>
+			      </ul>
+			    </div>
+			  </div>
+			</nav>
+		</div>   <!-- header end -->
+		<div class="content">	
+			<div class="left">	
+				<h3>技术类博客</h3>
+				<ul class="clearfix extra">
+					<% for(i=0;i<artData.length;i++){%>
+					<li>
+						<div class="title">
+							<a href="/detail?id=<%= artData[i]._id %>">
+								<%= artData[i].title %>	
+							</a>
+						</div>
+						<p><%=artData[i].body%></p>
+						<div class="bottom">
+							<ul class="clearfix tags">
+								<li class="browser"><i></i><span>	网站建设</span></li>
+								<li class="date"><i></i><span>	2018-07-26</span></li>
+								<li class="watch"><i></i><span>	浏览（60）</span></li>
+								<li class="like"><i></i><span>	喜欢（<%= artData[i].like %>）</span></li>
+								<li class="read"><a href="/detail?id=<%= artData[i]._id %> ">阅读原文>></a></li>
+							</ul>
+						</div>
+					</li>
+					<% } %>
+				</ul>
+				<!-- 分页 -->
+				<!-- <div class="pages">
+					<ul class="clearfix">
+						<li class="total">10</li>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>下一页</li>
+						<li>尾页</li>
+					</ul>
+				</div> -->
+				<!-- 加载更多 -->
+				<div class="loadmore">
+					加载更多
+				</div>
+			</div>
+			<div class="right">	
+				<h3>本栏推荐</h3>
+				<ul class="clearfix">
+					<li>
+						<h4><a href="#">十条设计原则教你学会如何设计网页布局!</a></h4>
+						<div class="con clearfix">
+							<div class="img">
+								<figure></figure>
+							</div>
+							<div class="words">
+								<p>网页常见的布局有很多种,单列布局,多列布局.其中单列布局是国外很多网站比较常用的.咱们很多...</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<h4><a href="#">十条设计原则教你学会如何设计网页布局!</a></h4>
+						<div class="con clearfix">
+							<div class="img">
+								<figure></figure>
+							</div>
+							<div class="words">
+								<p>网页常见的布局有很多种,单列布局,多列布局.其中单列布局是国外很多网站比较常用的.咱们很多...</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<h4><a href="#">十条设计原则教你学会如何设计网页布局!</a></h4>
+						<div class="con clearfix">
+							<div class="img">
+								<figure></figure>
+							</div>
+							<div class="words">
+								<p>网页常见的布局有很多种,单列布局,多列布局.其中单列布局是国外很多网站比较常用的.咱们很多...</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<h4><a href="#">十条设计原则教你学会如何设计网页布局!</a></h4>
+						<div class="con clearfix">
+							<div class="img">
+								<figure></figure>
+							</div>
+							<div class="words">
+								<p>网页常见的布局有很多种,单列布局,多列布局.其中单列布局是国外很多网站比较常用的.咱们很多...</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/tech.js"></script>
+</body>
+</html>

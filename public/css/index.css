@@ -1,0 +1,207 @@
+/*
+* @Author: admin
+* @Date:   2018-07-25 09:37:47
+* @Last Modified by:   Cinry
+* @Last Modified time: 2018-08-05 10:52:50
+*/
+
+
+
+
+/* 内容部分 */
+.content{
+	width: 75%;
+	/* background: pink; */
+	margin: 0 auto;
+	margin-top: 20px;
+}
+/* 左侧边栏 */
+.content aside{
+	width: 30%;
+	height: 100%;
+	float: left;
+
+}
+.content aside>div{
+	/* background: #fafafa; */
+}
+.content aside .aboutMe{
+	/* height: 300px; */
+	width: 100%;
+	text-align: center;
+	background: #fff;
+}
+.content aside h3{
+	position: relative;
+	font-size: 22px;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 10px;
+}
+.content aside  h3::before,aside h3::after{
+	content: '';
+	position: absolute;
+	width: 70px;
+	height: 2px;
+	background-color: #1d1d1d;
+	top: 30px;
+
+}
+.content aside h3::before{
+	margin-left: -85px;
+}
+.content aside h3::after{
+	margin-left: 25px;
+}
+.content aside .aboutMe figure{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: url('../img/me.jpg') no-repeat;
+	background-size: 100px 100px;
+	margin: 0 auto;
+	margin-top: 20px;
+	cursor: pointer;
+}
+.content aside .aboutMe .bottom{
+	text-align: left;
+	font-size: 15px;
+	margin-top: 10px;
+}
+.content aside .aboutMe .bottom ul{
+	padding: 10px 40px;
+	padding-left: 50px;
+}
+.content aside .aboutMe .bottom ul li{
+	margin-bottom: 10px;
+}
+.content aside .addMoment{
+	margin-top: 20px;
+	position: relative;
+}
+.content aside .addMoment span,.addMoment span{
+	display: block;
+	width: 120px;
+	height: 40px;
+	font-size: 18px;
+	color: white;
+	background: #1f1f1f;
+	line-height: 40px;
+	border-radius: 4px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.content aside .clickRank{
+	width: 100%;
+	margin-top: 40px;
+	background: #fff;
+}
+.content aside .clickRank ul{
+	padding: 10px;
+}
+.content aside .clickRank ul li{
+	float: left;
+	text-align: left;
+	color: #000;
+	margin-top:10px;
+	cursor: pointer;
+	opacity: 0.7;
+	border-bottom: 1px solid transparent;
+	padding-bottom: 10px;
+}
+.content aside .clickRank ul li:hover{
+	opacity: 1;
+	border-bottom: 1px solid #1d1d1d;
+}
+.content aside .clickRank ul li h4{
+	font-size: 15px;
+	font-weight: 600;
+
+}
+.content aside .clickRank ul li p,.content .con ul li .word p{
+	/* color: #666; */
+	line-height: 25px;
+	/* 设置溢出的文字以...的方式隐藏 */
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;/** 设置或检索伸缩盒对象的子元素的排列方式 **/
+	-webkit-line-clamp: 2;/** 显示的行数 **/
+}
+/* 右内容栏 */
+.content .con{
+	width: 65%;
+	height: 100%;
+	/* background: grey; */
+	float: right;
+}
+.content .con ul{
+	padding: 0;
+	width: 100%;
+	display: block;
+}
+.content .con ul li{
+	width: 100%;
+	float: left;
+	margin: 10px 0;
+	text-align: left;
+	background: #fff;
+	display: flex;
+}
+.content .con ul li .word{
+	width: 70%;
+	float: left;
+	padding: 10px;
+}
+.content .con ul li .word h4 a{
+	font-size: 16px;
+	color: #000;
+	font-weight: bold;
+}
+.content .con ul li .img{
+	width: 9rem;
+	float: right;
+	margin-top: 18px;
+	margin-left: 5rem;
+}
+.content .con ul li img{
+	width: 100%;
+	height: auto;
+}
+ .zxr>.addMoment{
+	display: none;
+}
+/* 当页面缩小时，左侧栏隐藏，右侧栏占100% */
+@media (max-width: 767px){
+	.content{
+		width: 100%;
+	}
+	.content aside{
+		display: none;
+	}
+	.content .con{
+		width: 100%;
+		display: flex;
+	}
+	.zxr>.addMoment{
+		display: block;
+		/* position: absolute; */
+		width: 100%;
+		height: 50px;	
+		text-align: center;	
+	}
+}
+
+
+
+.zxr .footer{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	font-size: 16px;
+	background: #fff;
+}
+.zxr .footer p{
+	padding-top: 20px;
+}

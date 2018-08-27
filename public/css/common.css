@@ -1,0 +1,62 @@
+/*
+* @Author: Cinry
+* @Date:   2018-07-30 22:07:53
+* @Last Modified by:   admin
+* @Last Modified time: 2018-08-23 16:04:31
+*/
+*{
+	list-style: none;
+}
+/* 头部 */
+.zxr{
+	background:#fafafa;
+}
+/* 导航栏 */
+.zxr .header{
+	/* background: pink; */
+	font-size: 16px;
+}
+.zxr .header .others{
+	height: 70px;
+	background: #fff;
+}
+.zxr .navbar-default{
+	background: rgba(255, 255, 255, 0.8);
+}
+.zxr .header .container-fluid{
+	padding:10px 0px;
+	margin: 0 auto;
+	width: 70%;
+}
+.zxr .header .navbar-right{
+	/* margin-right: 10%; */
+}
+.zxr .header .navbar-header .navbar-brand{
+	font-size: 23px;
+}
+.zxr .header .navbar-right .current{
+	color: pink;
+}
+.zxr .header .btns {
+	position: absolute;
+	right: 10px;
+	top: 20px;
+}
+.zxr .header .btns a{
+	font-size: 14px;
+	text-decoration: none;
+
+
+}
+@media(max-width: 767px){
+	.zxr .header .container-fluid{
+		width: 100%;
+	}
+	.zxr .navbar-default{
+		background: #fff;
+	}
+	.zxr .header .btns {
+		right: 50px;
+		top: 24px;
+	}
+}

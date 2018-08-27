@@ -1,0 +1,155 @@
+/*
+* @Author: admin
+* @Date:   2018-07-26 14:34:56
+* @Last Modified by:   Cinry
+* @Last Modified time: 2018-07-28 01:09:21
+*/
+*{
+	list-style: none;
+}
+.Site{
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+.Site-content{
+	flex: 1;
+}
+.zxr .header{
+	width: 100%;
+	height: 60px;
+	background: #6ea2a2;
+}
+.zxr .header>div{
+	display: inline-block;
+}
+.zxr .header .perInfo{
+	width: 200px;
+	padding: 0px 20px;
+	color: #fafafa;
+}
+.zxr .header .new .symbol{
+	cursor: pointer;
+	font-size: 14px;
+	padding: 5px;
+}
+.zxr .header .new .symbol a{
+	text-decoration: none;
+	/* font-size: 16px; */
+	display: inline-block;
+	padding: 0px 5px;
+	color: #fafafa;
+}
+.zxr .header .new .symbol i.glyphicon{
+	color: #fafafa;
+	font-size: 12px;
+}
+.zxr .arrows{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-left: 2px solid #fafafa;
+	border-top: 2px solid #fafafa;
+	transform: rotate(-135deg);
+	margin-bottom: 3px;
+}
+/* 头部右边的一些功能 */
+.zxr .header .rightHead{
+	float: right;
+	width: 300px;
+	height: 50px;
+	padding: 10px 0;
+	line-height: 40px;
+	font-size: 15px;
+	color: #fafafa;
+	margin-right: 10px;
+}
+.zxr .header .rightHead ul li{
+	float: left;
+	padding: 0 11px;
+}
+.zxr .header .rightHead ul .admin{
+	cursor: pointer;
+}
+.zxr .header .rightHead ul .msg{
+	position: relative;
+}
+.zxr .header .rightHead ul .msg .tip{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: #934522;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	right: 3px;
+	z-index: 99;
+	line-height: 15px;
+	text-align: center;
+	font-size: 12px;
+}
+
+
+
+.content aside{
+	width: 15%;
+	background: #6ea2a2;	
+	position: absolute;
+	/* 长度大于当前显示的时候，出现滚动条 */
+	overflow: auto;
+	/* 通过设置顶部和底部可固定左侧栏，高度无需设置*/
+	bottom: 0;
+	top: 60px;
+	z-index: 99;
+}
+.content aside .admin{
+	width: 100%;
+	margin-top: 40px;
+	/* padding: 0 10px; */
+}
+.content aside .admin h3{
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 10px 0;
+	padding-left: 20px;
+	position: relative;
+}
+.content aside .admin h3::after{
+	content: '';
+	position: absolute;
+	width: 115px;
+	height: 1px;
+	background: #555;
+	margin-top: 28px;
+	margin-left: -60px;
+}
+.content aside .admin ul{
+	padding: 0;
+}
+.content aside .admin ul li{
+	width: 100%;
+	height: 40px;
+	font-size: 16px;
+	/* margin-bottom: 10px; */
+	padding: 10px 0;
+	cursor: pointer;
+	color: #333;
+	text-align: center;
+	line-height: 20px;
+}
+.content aside .admin ul li i{
+	display: inline-block;
+	padding: 0 8px;
+}
+.content .con{
+	width: 85%;
+	position: absolute;
+	top: 60px;
+	bottom: 0px;
+	right: 0px;
+	background: pink;
+}
+.content .con .add{
+	
+}

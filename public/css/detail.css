@@ -1,0 +1,155 @@
+/*
+* @Author: Cinry
+* @Date:   2018-08-05 19:54:25
+* @Last Modified by:   admin
+* @Last Modified time: 2018-08-27 11:30:17
+*/
+ul{
+	padding: 0;
+}
+.content{
+	display: flex;
+	width: 80%;
+	margin: 0 auto;
+}
+.content>div{
+	background: #fff;
+	margin-top: 15px;
+}
+.content .left{
+	width: 60%;
+	height: 800px;
+	margin-right: 10%;
+}
+.content .left .smallNav{
+	margin-top: 10px;
+	color: green;
+	border-bottom: 1px solid #ccc;
+}
+.content .left .smallNav ul li{
+	float: left;
+	padding: 0 5px;
+	margin-left: 5px;
+}
+.content .left .smallNav ul li::after{
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: transparent;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	transform: rotate(135deg);
+	margin-top: 6px;
+}
+.content .left .article h3{
+	padding-left: 10px;
+}
+.content .left .article .tabs{
+	margin-top: 12px;
+	border-bottom: 1px dashed green;
+}
+.content .left .article ul li{
+	float: left;
+	padding: 2px 5px;
+	margin-left: 5px;
+	opacity: 0.7;
+	cursor: pointer;
+}
+.content .left .article ul li:hover{
+	opacity: 1;
+}
+.content .left .article ul li span{
+	padding-right: 5px;
+}
+.content .left .article .main{
+	margin-top: 10px;
+	padding: 0 15px;
+}
+.content .left .article .main p{
+	font-size: 14px;
+	line-height: 25px;
+}
+
+
+
+
+.content .right{
+	width: 30%;
+	height: 300px;
+	
+}
+.content .right .tag{
+	width: 300px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+.content .right .tag .ts a{
+	float: left;
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+	margin-left: 10px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 5px;
+	margin-top: 10px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 15px;
+	cursor: pointer;
+	opacity: 0.7;
+	transition: 0.5s;
+}
+.content .right .tag .ts a:hover{
+	opacity: 1;
+}
+
+.content .right .tag .ts a:nth-child(6n){
+	background: #00a67c;
+}
+.content .right .tag .ts a:nth-child(6n+1){
+	background: #567e95;
+}
+.content .right .tag .ts a:nth-child(6n+2){
+	background: #5cb85c;
+}
+.content .right .tag .ts a:nth-child(6n+3){
+	background:#4a4a4a;
+}
+.content .right .tag .ts a:nth-child(6n+4){
+	background: #d9534f;
+}
+.content .right .tag .ts a:nth-child(6n+5){
+	background: #f60;
+}
+
+.content .right .new{
+	padding: 0 15px;
+}
+.content .right .new ul li {
+	margin-top: 5px;
+	padding: 5px;
+	border-bottom: 1px dashed #ccc;
+}
+.content .right .new ul li span{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	color: white;
+	border-radius: 3px;
+	margin-right: 5px;
+}
+.content .right .new ul li span:nth-child(1){
+	background: #d9534f;
+}
+@media (max-width: 767px){
+	.content .left{
+		width: 100%;	
+	}
+	.content .right{
+		display: none;
+	}
+}

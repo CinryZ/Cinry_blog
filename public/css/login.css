@@ -1,0 +1,83 @@
+/*
+* @Author: Cinry
+* @Date:   2018-08-13 22:32:19
+* @Last Modified by:   admin
+* @Last Modified time: 2018-08-23 15:59:35
+*/
+*{
+			padding: 0;
+			margin: 0;
+		}
+		.header{
+			width: 100%;
+			height: 50px;
+			background: rgba(255, 255, 255, 0.5);
+			position: absolute;
+			z-index: 2;
+		}
+		.bg{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: url('../img/bg.jpg') no-repeat;
+			background-size: 100% 100%;
+		}
+		.bg>div{
+			position: absolute;
+		}
+		.bg .con{
+			width: 500px;
+			left: 50%;
+			top: 30%;
+			margin-left: -200px;
+			border: 1px solid #ccc;
+			background: rgba(0, 0, 255, 0.1);
+		}
+		.bg .con .box{
+			padding: 20px 40px;
+			padding-top: 50px;
+		}
+		.bg .con .box input{
+			width: 300px;
+			height: 40px;
+			margin-bottom: 20px;
+			font-size: 16px;
+			margin-left: 25px;
+			padding-left: 10px;
+			
+		}
+		.bg .con .box .glyphicon{
+			font-size: 18px;
+		}
+		.bg .con .bottom{
+			display: flex;
+			width: 175px;
+			margin: 0 auto;
+		}
+		.bg .con .bottom button{
+			margin-left: 20px;
+		}
+		.bg .con .tip a{
+			cursor: pointer;
+		}
+		@media(max-width: 600px){
+			.bg .con{
+				width: 90%;
+				margin: 0;
+				left: 0;
+			}
+				.bg .con form{
+				width: 100%;
+				padding: 10px
+			}
+			.bg .con .box{
+				padding: 10px;
+			}
+			.bg .con .box input{
+				width: 70%;
+				height: 40px;
+			}
+			.bg .con .tip{
+				margin-top: 10px;
+			}
+		}

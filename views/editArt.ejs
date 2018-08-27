@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- 视口 -->
+		<meta name="viewport"   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="fontawesome-4.2.0/css/font-awesome.min.css">
+		<!--引入wangEditor.css-->
+    	<link rel="stylesheet" type="text/css" href="css/wangEditor-1.1.0-min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			.content{
+				width: 80%;
+				margin: 0 auto;
+				margin-top: 20px;
+			}
+			.content input{
+				width: 100%;
+				height: 40px;
+				font-weight: bold;
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="zxr">
+			<div class="header">
+				<div class="others"></div>
+				<!-- 此处用bootstrap插件做一个导航栏 -->
+				<nav class="navbar navbar-default navbar-fixed-top">
+				  <div class="container-fluid">
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        </button>
+				      <a class="navbar-brand" href="#">CinryのBlog</a>
+				    </div>
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      	<ul class="nav navbar-nav navbar-right">
+					        <li><a href="/">网站首页</a></li>
+					        <li class="dropdown ">
+						         <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我的博客 <span class="caret"></span>
+						         </a>
+						         <ul class="dropdown-menu">
+						            <li><a href="/tech">专业技术</a></li>
+						            <li><a href="#">随思随想</a></li>
+						         </ul>
+					        </li>
+					        <li><a href="/personal">关于我</a></li>
+					        <li><a href="/editArt">发表文章</a></li>
+				      </ul>
+				    </div>
+				  </div>
+				</nav>
+			</div>   <!-- header end -->
+			<div class="content">
+				<div class="title">
+					<input type="text" placeholder="您的标题">
+				</div>
+				<div class="con">
+					<!-- 通过script将div变为富文本框 -->
+					 <div id='txtDiv' style='border:1px solid #cccccc; height:240px;'>
+        				<p></p>
+    				</div>
+					<div style='margin-top:10px;'>
+				        <textarea id='textarea' style='width:100%; height:100px; margin-top:10px;'></textarea>
+				    </div>
+				</div>
+				<button class="btn btn-primary publish">发表文章</button>
+			</div>
+
+    <!--引入 wangEditor.js-->
+    <script type="text/javascript" src='js/wangEditor-1.1.0-min.js'></script>
+    <script type="text/javascript">
+        $(function(){
+            // $('#spanTime').text((new Date()).toString());
+            //一句话，即可把一个div 变为一个富文本框！o(∩_∩)o 
+            var $editor = $('#txtDiv').wangEditor();
+
+            var $textarea = $('#textarea'),
+                $btnHtml = $('#btnHtml'),
+                $btnText = $('#btnText'),
+                $btnHide = $('#btnHide');
+            	$textarea.hide();
+        
+	        // 发表文章即向服务器添加数据，所以要发送数据，使用ajax
+	        var id ;
+	        function send(){
+	        	
+		        }
+		        $('.publish').click(function(){
+		        	// let p = new Promise(function(resolve,reject){
+			        	$.ajax({
+			        		url:"/addList",
+			        		method:"post",
+			        		dataType:"json",
+			        		data:{
+			        			title:$('.title input').val(),
+			        			con:$editor.html()
+			        		},
+
+			        		success:function(res){
+			        			console.log(res._id)  //直接将id返回
+			        			id = res._id;
+			        			// resolve(id)
+			        			location.href=`/detail?id=${id}`
+			        		}
+			        	// })
+			        })
+		        	// p.then(data=>{
+		        	// 	console.log(data) //  解决异步问题将id提取出来
+		        	// 	// 点击后跳转页面
+		        	// 	console.log('/detail.ejs?'+data)
+		        	// 	Location.href='/detail.ejs?'+data
+		        	// })
+		        	
+		        	
+		        })
+		    
+        });
+    </script>
+	</body>
+</html>

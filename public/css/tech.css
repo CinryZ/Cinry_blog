@@ -1,0 +1,221 @@
+/*
+* @Author: Cinry
+* @Date:   2018-07-30 22:39:22
+* @Last Modified by:   Cinry
+* @Last Modified time: 2018-08-27 15:23:57
+*/
+html{
+	/* font-size: 15px; */
+}
+.zxr{
+	background: #fee;
+}
+.zxr .header .navbar-nav>.active>a{
+	color: pink;
+	background: #fff;
+}
+.content{
+	width: 80%;	
+	/* height: 800px;	 */
+	margin: 0 auto;
+	display: flex;
+	padding-bottom: 30px;
+}
+.content .words p,.content .extra p{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+}
+.content .extra p{
+	-webkit-line-clamp: 2;
+}
+
+.content>div{
+	background: #fff;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+.content .left{
+	width: 65%;
+	margin-right: 20px;
+	position: relative;
+}
+.content .left h3{
+	display: block;
+	font-size: 18px;
+	padding: 0px 12px;
+	padding-bottom: 10px;
+	font-family: "黑体";
+	color: green;
+	border-bottom: 2px solid green;
+}
+.content ul{
+	padding: 10px 15px;
+
+}
+.content ul li{
+	float: left;
+}
+.content .extra>li{
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 13px;
+}
+.content .extra .title a{
+	font-size: 16px;
+	color: #555;
+	font-weight: bold;
+}
+.content .extra p{
+	color: #888;
+	margin: 15px 0px;
+}
+.content .bottom .tags{
+	padding: 0px;
+	padding-bottom: 10px;
+}
+.content .bottom .tags li{
+	padding: 0px 5px;
+}
+
+.content .bottom .tags li i{
+	display: inline-block;
+	width: 16px;
+	height: 14px;
+}
+.content .bottom .tags li span{
+	font-size: 12px;
+	line-height: 10px;
+}
+.content .bottom .tags li.read{
+	float: right;
+	font-size: 12px;
+	
+	cursor: pointer;
+	padding-top: 2px;
+}
+.content .bottom .tags li.read a{
+	color: green;
+}
+.content .bottom .tags li.browser{
+	cursor: pointer;
+	color: green;
+}
+.content .bottom .tags li:nth-of-type(1) i{
+	background: url('../img/newsbg01.png');
+}
+.content .bottom .tags li:nth-of-type(2) i{
+	background: url('../img/newsbg02.png');
+}
+.content .bottom .tags li:nth-of-type(3) i{
+	background: url('../img/newsbg04.png');
+	background-position: 0px 0px;
+}
+.content .bottom .tags li:nth-of-type(4) i{
+	background: url('../img/like.jpg');
+	background-position: 2px 1px;
+}
+/* 分页 */
+.content .left .pages{
+	position: absolute;
+	width:400px;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -180px;
+}
+.content .left .pages ul li{
+	border: 1px solid #666;
+	margin-right: 10px;
+	padding: 2px 7px;
+	cursor: pointer;
+}
+
+
+
+.content .right{
+	/* flex-grow: 1; */
+	width: 335px;
+}
+.content .right  h3{
+	position: relative;
+	text-align: center;
+}
+.content .right  h3::before,.right h3::after{
+	content: '';
+	position: absolute;
+	width: 70px;
+	height: 2px;
+	background-color: #1d1d1d;
+	top: 12px;
+
+}
+.content .right h3::before{
+	margin-left: -85px;
+}
+.content .right h3::after{
+	margin-left: 25px;
+}
+.content .right ul li .con>div{
+	float: left;
+}
+.content .right ul li{
+	border-bottom: 1px solid #ccc;
+	opacity: 0.8;
+	padding-bottom: 5px;
+}
+.content .right ul li h4 a{
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+}
+.content .right .img{
+	width: 100px;
+	height: 90px;
+	border: 1px solid #ddd;
+}
+.content .right .words{
+	width: 10rem;
+	margin-left: 15px;
+	line-height: 22px;
+}
+.content .right .img figure{
+	width: 100%;
+	height: 100%;
+	background: url('../img/recom1.jpg') no-repeat;
+	background-position: left center;
+	background-size: 200px 100px;
+}
+/* 加载更多 */
+.loadmore{
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid #666;
+	color: #666;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+}
+
+@media (max-width: 767px){
+	.content{
+		width: 100%;
+	}
+	.content .right{
+		display: none;
+	}
+	.content .left{
+		width: 100%;
+		padding-bottom: 90px;
+		margin-right: 0;
+	}
+	.content .left .pages{
+		width: 90%;
+		margin-left: -40%;
+	}
+	.content .left .pages ul li{
+		margin-right: 5px;
+		padding: 2px 5px;
+	}
+}

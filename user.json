@@ -1,0 +1,12 @@
+{
+	"userid":"000",
+	"username":"cinry",
+	"password":"aaaaaa",
+	"superuser":1
+}
+{
+	"userid":"001",
+	"username":"admin",
+	"password":"aadmin",
+	"superuser":0
+}
